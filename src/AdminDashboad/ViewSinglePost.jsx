@@ -17,7 +17,7 @@ const ViewSinglePost = () => {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const response = await axios.get(`http://localhost:4000/api/posts/${id}`)
+        const response = await axios.get(`https://ola-reddit.onrender.com/api/posts/${id}`)
         setPost(response.data.data)
       }
       fetchPost()
@@ -29,7 +29,7 @@ const ViewSinglePost = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Post?')
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/posts/${_id}`)
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/posts/${_id}`)
         if (res.data.status === 200) {
           toast.success(res.data.msg)
           // Filter out the deleted post from the existing state
@@ -61,7 +61,7 @@ const ViewSinglePost = () => {
                         {users}
                       </div>
                     ) : (
-                      <img src={`http://localhost:4000/${postItem.user.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                      <img src={`https://ola-reddit.onrender.com/${postItem.user.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>
                   </div>
@@ -91,7 +91,7 @@ const ViewSinglePost = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`http://localhost:4000/${postItem.img}`} alt={postItem?.img} className='object-cover w-full rounded-lg' />
+                  <img src={`https://ola-reddit.onrender.com/${postItem.img}`} alt={postItem?.img} className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>

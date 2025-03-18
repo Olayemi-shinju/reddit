@@ -37,7 +37,7 @@ const SinglePost = () => {
                     text: formData.text,
                     user_id: userId
                 }
-                const res = await axios.post(`http://localhost:4000/api/comment/${id}`, data)
+                const res = await axios.post(`https://ola-reddit.onrender.com/api/comment/${id}`, data)
                 setComment((prevComments) => [...prevComments, res.data.data])
                 setFormData({ text: '' });
             }
@@ -49,7 +49,7 @@ const SinglePost = () => {
     useEffect(() => {
         const fetchPostComments = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/api/comments/${id}`);
+                const res = await axios.get(`https://ola-reddit.onrender.com/api/comments/${id}`);
                 if (res.data.status === 200) {
                     setComment(res.data.data);
                 }
@@ -68,7 +68,7 @@ const SinglePost = () => {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const res = await axios.get(`http://localhost:4000/api/post/${id}`)
+                const res = await axios.get(`https://ola-reddit.onrender.com/api/post/${id}`)
                 setPost(res.data.data)
                
             } catch (error) {

@@ -21,7 +21,7 @@ const AdminLogin = () => {
             if (!formData.email.trim() || !formData.password.trim()) {
                 setError('Please fill all field')
             } else {
-                const res = await axios.post('http://localhost:4000/api/login/admin', formData)
+                const res = await axios.post('https://ola-reddit.onrender.com/api/login/admin', formData)
                 if (res.data.status === 200) {
                     navigate('/AdminDash')
                     toast.success(res.data.msg)

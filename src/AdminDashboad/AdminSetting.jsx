@@ -41,7 +41,7 @@ const adminId = storedAdminData.id
     const handleSubmit = async(e)=>{
         e.preventDefault()
         try {
-            const resp = await axios.put(`http://localhost:4000/api/update/${adminId}`, formData)
+            const resp = await axios.put(`https://ola-reddit.onrender.com/api/update/${adminId}`, formData)
                 setAdmin(resp.data.data)
             if(resp.data.status === 200){
                 toast.success(resp.data.msg)

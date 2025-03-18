@@ -71,7 +71,7 @@ const UpdatePost = () => {
 
         try {
             if (!title.trim()) return toast.error('Please Enter a Title')
-            const resp = await axios.put(`http://localhost:4000/api/post/${id}`, formData)
+            const resp = await axios.put(`https://ola-reddit.onrender.com/api/post/${id}`, formData)
             if (resp.data.status === 200) {
                 toast.success(resp.data.msg)
                 navigate('/')

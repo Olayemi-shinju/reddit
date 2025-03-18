@@ -14,7 +14,7 @@ const ViewPost = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/post')
+        const res = await axios.get('https://ola-reddit.onrender.com/api/post')
         if (res.data.status === 200) {
           setGetPost(res.data.data)
         } else {
@@ -30,7 +30,7 @@ const ViewPost = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Post?')
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/posts/${_id}`)
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/posts/${_id}`)
         if (res.data.status === 200) {
           toast.success(res.data.msg)
           // Filter out the deleted post from the existing state
@@ -62,7 +62,7 @@ const ViewPost = () => {
                       </div>
                     ) : (
                       <div className="">
-                        <img src={`http://localhost:4000/${post.user.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
+                        <img src={`https://ola-reddit.onrender.com/${post.user.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
                       </div>
                     )}
 
@@ -91,7 +91,7 @@ const ViewPost = () => {
                 </div>
               }
               <div className=''>
-                <img src={`${post.img ? `http://localhost:4000/${post.img}` : null}`} alt={post?.img} className='object-cover w-full rounded-lg' />
+                <img src={`${post.img ? `https://ola-reddit.onrender.com/${post.img}` : null}`} alt={post?.img} className='object-cover w-full rounded-lg' />
               </div>
             </div>
           ))

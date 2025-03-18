@@ -26,7 +26,7 @@ const Signin = ({ close, goBackToLogin }) => {
       if (!formData.email.trim() || !formData.password.trim() || !formData.fullname.trim() || !formData.gender.trim()) {
         setError('Please Fill All Input Field');
       } else {
-        const resp = await axios.post('http://localhost:4000/api/user', formData);
+        const resp = await axios.post('https://ola-reddit.onrender.com/api/user', formData);
         if (resp.data.status === 200) {
           toast.success(resp.data.msg);
           setTimeout(() => {

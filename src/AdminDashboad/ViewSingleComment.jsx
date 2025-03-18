@@ -17,7 +17,7 @@ const ViewSingleComment = () => {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const response = await axios.get(`http://localhost:4000/api/comment/${id}`)
+        const response = await axios.get(`https://ola-reddit.onrender.com/api/comment/${id}`)
         if (response.data.status === 200) {
           setComment(response.data.data)
         } else {
@@ -33,7 +33,7 @@ const ViewSingleComment = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Comment?')
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/comment/${_id}`)
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/comment/${_id}`)
 
         if (res.data.status === 200) {
           toast.success(res.data.msg)
@@ -70,7 +70,7 @@ const ViewSingleComment = () => {
                       </div>
                     ) : (
                       <div className="">
-                        <img src={`http://localhost:4000/${e.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                        <img src={`https://ola-reddit.onrender.com/${e.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
                       </div>
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>

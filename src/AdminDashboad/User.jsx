@@ -21,7 +21,7 @@ const UsersTable = () => {
     try {
       const confirm = window.confirm('Are you sure you want to delete this user');
       if(confirm){
-        const res = await axios.delete(`http://localhost:4000/api/user/${id}`)
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/user/${id}`)
         if(res.data.status === 200){
           toast.success(res.data.msg)
         }else{

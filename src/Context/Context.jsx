@@ -29,7 +29,7 @@ const userId = storedUserData?.id;
   useEffect(() => {
     const fetchAdmin = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/get/${adminId}`);
+        const res = await axios.get(`https://ola-reddit.onrender.com/api/get/${adminId}`);
         setAdmin(res.data.data);
         // console.log(res.data.data);
       } catch (error) {
@@ -39,7 +39,7 @@ const userId = storedUserData?.id;
   
     const fetchUser = async () => {
       try {
-        const res = await axios.get(`http://localhost:4000/api/user/get/${userId}`);
+        const res = await axios.get(`https://ola-reddit.onrender.com/api/user/get/${userId}`);
         setUser(res.data.data);
       } catch (error) {
         console.log(error);
@@ -55,7 +55,7 @@ const userId = storedUserData?.id;
   useEffect(()=>{
     const fetchUser = async()=>{
       try {
-        const res = await axios.get('http://localhost:4000/api/users')
+        const res = await axios.get('https://ola-reddit.onrender.com/api/users')
         setGetUser(res.data.data)
       } catch (error) {
         console.log(error)

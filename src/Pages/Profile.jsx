@@ -32,7 +32,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const response = await axios.get(`http://localhost:4000/api/posts/${userId}`);
+        const response = await axios.get(`https://ola-reddit.onrender.com/api/posts/${userId}`);
         setPost(response.data.data);
       };
       fetchPost();
@@ -44,7 +44,7 @@ const Profile = () => {
   useEffect(() => {
     try {
       const fetchPost = async () => {
-        const response = await axios.get(`http://localhost:4000/api/comment/${userId}`);
+        const response = await axios.get(`https://ola-reddit.onrender.com/api/comment/${userId}`);
         setComment(response.data.data);
       };
       fetchPost();
@@ -57,7 +57,7 @@ const Profile = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Post?');
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/posts/${_id}`);
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/posts/${_id}`);
         if (res.data.status === 200) {
           toast.info(res.data.msg);
           // Filter out the deleted post from the existing state
@@ -75,7 +75,7 @@ const Profile = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Comment?');
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/comment/${_id}`);
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/comment/${_id}`);
         if (res.data.status === 200) {
           toast.info(res.data.msg);
           // Filter out the deleted comment from the existing state
@@ -100,7 +100,7 @@ const Profile = () => {
               </div>
             ) : (
               <div className="">
-                <img src={`http://localhost:4000/${user.avatar}`} alt="" className="h-[60px] w-[60px] rounded-full" />
+                <img src={`https://ola-reddit.onrender.com/${user.avatar}`} alt="" className="h-[60px] w-[60px] rounded-full" />
               </div>
             )}
             <Link to='/setting' className='absolute ml-10 mt-[30px]'>
@@ -141,7 +141,7 @@ const Profile = () => {
                         {users}
                       </div>
                     ) : (
-                      <img src={`http://localhost:4000/${postItem.user.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                      <img src={`https://ola-reddit.onrender.com/${postItem.user.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>
                   </div>
@@ -185,7 +185,7 @@ const Profile = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`http://localhost:4000/${postItem.img}`} alt="" className='object-cover w-full rounded-lg' />
+                  <img src={`https://ola-reddit.onrender.com/${postItem.img}`} alt="" className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>

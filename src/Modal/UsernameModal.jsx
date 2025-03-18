@@ -21,7 +21,7 @@ const ChangeUsernameModal = ({ closeModal, saveUsername }) => {
         try {
             console.log(formData)
             if (!formData.fullname.trim()) return setError('Please fiil the field')
-            const res = await axios.put(`http://localhost:4000/api/${id}`, formData)
+            const res = await axios.put(`https://ola-reddit.onrender.com/api/${id}`, formData)
             if (res.data.status === 200) {
                 toast.success(res.data.msg)
                 closeModal()

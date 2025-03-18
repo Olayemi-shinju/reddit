@@ -13,7 +13,7 @@ const AdminDash = () => {
     useEffect(() => {
         const fetchPost = async () => {
           try {
-            const res = await axios.get('http://localhost:4000/api/post')
+            const res = await axios.get('https://ola-reddit.onrender.com/api/post')
             if (res.data.status === 200) {
               setGetPost(res.data.data)
             } else {
@@ -29,7 +29,7 @@ const AdminDash = () => {
     useEffect(() => {
       const fetchPost = async () => {
         try {
-          const res = await axios.get('http://localhost:4000/api/comments')
+          const res = await axios.get('https://ola-reddit.onrender.com/api/comments')
           if (res.data.status === 200) {
             setPost(res.data.data)
           } else {

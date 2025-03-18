@@ -36,7 +36,7 @@ const Home = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/post');
+        const res = await axios.get('https://ola-reddit.onrender.com/api/post');
         if (res.data.status === 200) {
           setGetPost(res.data.data);
         
@@ -53,9 +53,9 @@ const Home = () => {
   const handleLike = async (_id) => {
     const data = { user_id: userID, post_id: _id }
     try {
-      const res = await axios.post('http://localhost:4000/api/like', data);
+      const res = await axios.post('https://ola-reddit.onrender.com/api/like', data);
       if (res.data.status === 200) {
-        const resp = await axios.get(`http://localhost:4000/api/like/${_id}`);
+        const resp = await axios.get(`https://ola-reddit.onrender.com/api/like/${_id}`);
         setLikeCounts((prevLikeCounts) => ({ ...prevLikeCounts, [_id]: resp.data.data }));
       }
     } catch (error) {
@@ -67,7 +67,7 @@ const Home = () => {
   const handleDisLike = async (_id) => {
     const data = { userId: userID, }
     try {
-      const res = await axios.delete(`http://localhost:4000/api/dislike/${_id}`, { data });
+      const res = await axios.delete(`https://ola-reddit.onrender.com/api/dislike/${_id}`, { data });
       setLikeCounts((prevLikeCounts) => ({ ...prevLikeCounts, [_id]: res.data.data }));
     } catch (error) {
       console.log(error);
@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
                   ) : (
                     <div className="">
-                      <img src={`http://localhost:4000/${post.user?.avatar}`} alt={post?.title} className="h-[30px] w-[30px] rounded-full" />
+                      <img src={`https://ola-reddit.onrender.com/${post.user?.avatar}`} alt={post?.title} className="h-[30px] w-[30px] rounded-full" />
                     </div>
                   )}
 
@@ -116,7 +116,7 @@ const Home = () => {
               <Link to={post.url} className={`${light ? 'text-white' : 'text-black'} text-lg list-none font-semibold`}>{post.url}</Link>
             </div>}
             {post.img && <div className='w-full'>
-              <img src={`http://localhost:4000/${post.img}`} alt="" className='object-cover w-full rounded-lg' />
+              <img src={`https://ola-reddit.onrender.com/${post.img}`} alt="" className='object-cover w-full rounded-lg' />
             </div>}
 
             <div className='mt-3 flex items-center gap-4 mb-5 w-full'>

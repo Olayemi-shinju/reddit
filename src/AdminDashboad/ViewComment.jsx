@@ -14,7 +14,7 @@ const ViewComment = () => {
   useEffect(() => {
     const fetchPost = async () => {
       try {
-        const res = await axios.get('http://localhost:4000/api/comments')
+        const res = await axios.get('https://ola-reddit.onrender.com/api/comments')
         if (res.data.status === 200) {
           setGetPost(res.data.data)
         } else {
@@ -30,7 +30,7 @@ const ViewComment = () => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Comment?')
       if (confirm) {
-        const res = await axios.delete(`http://localhost:4000/api/comment/${_id}`)
+        const res = await axios.delete(`https://ola-reddit.onrender.com/api/comment/${_id}`)
 
         if (res.data.status === 200) {
           toast.success(res.data.msg)

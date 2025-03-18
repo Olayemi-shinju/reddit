@@ -40,7 +40,7 @@ const AdminSignin = () => {
     return (
         <div>
             <form action="" onSubmit={handleSubmit} className='mx-auto mt-10 w-[40%] p-7 border rounded mb-10'>
-                <h1 className='text-center uppercase font-bold text-2xl opacity-60'>Signin</h1>
+                <h1 className='text-center uppercase font-bold text-2xl opacity-60'>Sign Up</h1>
                 <div className='mt-4'>
                     <label htmlFor="Full Name" className='text-lg font-bold opacity-50'>First Name:</label>
                     <input type="text" name='fullname' value={formData.fullname} onChange={handleChange} id="Full Name" placeholder='Full Name' className='w-full rounded-md border border-blue-500 p-2' />

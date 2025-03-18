@@ -91,7 +91,7 @@ const ViewSinglePost = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`https://ola-reddit.onrender.com/${postItem.img}`} alt={postItem?.img} className='object-cover w-full rounded-lg' />
+                  <img src={`https://ola-reddit.onrender.com/${postItem?.img}`} alt={postItem?.img} className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>

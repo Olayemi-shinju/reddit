@@ -209,7 +209,7 @@ const Profile = () => {
                       </div>
                     ) : (
                       <div className="">
-                        <img src={`http://localhost:4000/${e?.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                        <img src={`https://ola-reddit.onrender.com/${e?.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
                       </div>
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>

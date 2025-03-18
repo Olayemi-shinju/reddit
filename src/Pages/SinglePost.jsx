@@ -97,7 +97,7 @@ const SinglePost = () => {
                                             </div>
                                         ) : (
                                             <div className="">
-                                                <img src={`http://localhost:4000/${post.user?.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
+                                                <img src={`https://ola-reddit.onrender.com/${post.user?.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
                                             </div>
                                         )}
 

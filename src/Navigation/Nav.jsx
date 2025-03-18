@@ -87,7 +87,7 @@ const Nav = () => {
                                     </div>
                                 ) : (
                                     <div className="">
-                                        <img src={`https://ola-reddit.netlify.app/${user?.avatar}`} alt="" srcset="" className="lg:h-[30px] lg:w-[30px] w-[20px] h-[20px] rounded-full" />
+                                        <img src={`https://ola-reddit.onrender.com/${user?.avatar}`} alt="" srcset="" className="lg:h-[30px] lg:w-[30px] w-[20px] h-[20px] rounded-full" />
                                     </div>
                                 )}
                                 <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[20px] lg:mt-[25px]"></div>

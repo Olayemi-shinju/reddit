@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react'
-import { GoPlus } from "react-icons/go";
 const Error = () => {
     const [isVisible, setIsVisible] = useState(true);
 

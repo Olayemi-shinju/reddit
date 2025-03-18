@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import Sidenav from '../Navigation/Sidenav';
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { FaArrowAltCircleUp } from "react-icons/fa";
 import { FaArrowAltCircleDown } from "react-icons/fa";
@@ -92,7 +91,7 @@ const Home = () => {
                     </div>
                   ) : (
                     <div className="">
-                      <img src={`http://localhost:4000/${post.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                      <img src={`http://localhost:4000/${post.user?.avatar}`} alt={post?.title} className="h-[30px] w-[30px] rounded-full" />
                     </div>
                   )}
 

@@ -1,6 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom'
-import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import axios from 'axios';
 import { ToggleClass } from '../Context/Context';
 import AdminSideNav from './AdminPage';
@@ -9,7 +7,6 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ViewComment = () => {
-  // const {id} = useParams()
   const { light } = useContext(ToggleClass)
   const getUser = JSON.parse(localStorage.getItem('userDetail'));
   const users = getUser?.fullname.slice(0, 1).toUpperCase();

@@ -7,8 +7,7 @@ import { RiDeleteBin6Line } from 'react-icons/ri';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 const ViewPost = () => {
-  // const {id} = useParams()
-  const { light, open } = useContext(ToggleClass)
+  const { light } = useContext(ToggleClass)
   const getUser = JSON.parse(localStorage.getItem('userDetail'));
   const users = getUser?.fullname.slice(0, 1).toUpperCase();
   const [getPost, setGetPost] = useState([])
@@ -92,7 +91,7 @@ const ViewPost = () => {
                 </div>
               }
               <div className=''>
-                <img src={`${post.img ? `http://localhost:4000/${post.img}` : null}`} alt="image" className='object-cover w-full rounded-lg' />
+                <img src={`${post.img ? `http://localhost:4000/${post.img}` : null}`} alt={post?.img} className='object-cover w-full rounded-lg' />
               </div>
             </div>
           ))

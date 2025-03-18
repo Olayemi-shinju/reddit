@@ -13,7 +13,6 @@ import Profile from "./Pages/Profile";
 import Setting from "./Pages/Setting";
 import AdminLogin from "./AdminDashboad/AdminLogin";
 import AdminSignin from "./AdminDashboad/AdminSignin";
-import AdminSideNav from "./AdminDashboad/AdminPage";
 import AdminDash from "./AdminDashboad/AdminDash";
 import NotFound from "./Pages/NotFound";
 import ViewPost from "./AdminDashboad/ViewPost";

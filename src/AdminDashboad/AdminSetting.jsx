@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import AdminSideNav from './AdminPage';
 import AdminNav from './AdminNav';
 import axios from 'axios';

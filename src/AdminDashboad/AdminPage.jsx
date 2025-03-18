@@ -1,15 +1,14 @@
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToggleClass } from '../Context/Context';
 
 const AdminSideNav = () => {
   const navigate = useNavigate();
-  const [adminData, setAdminData] = useState({});
 const {getAdmin} = useContext(ToggleClass)
   useEffect(() => {
     const storedAdminData = localStorage.getItem('adminDetail');
     if (storedAdminData) {
-      setAdminData(JSON.parse(storedAdminData));
+        navigate('/AdminDash')
     } else {
       navigate('/AdminLogin');
     }

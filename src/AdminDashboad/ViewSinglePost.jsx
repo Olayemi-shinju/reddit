@@ -24,7 +24,7 @@ const ViewSinglePost = () => {
     } catch (error) {
       console.log(error)
     }
-  }, [])
+  }, [id])
   const handleDelete = async (_id) => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Post?')
@@ -91,7 +91,7 @@ const ViewSinglePost = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`http://localhost:4000/${postItem.img}`} alt="image" className='object-cover w-full rounded-lg' />
+                  <img src={`http://localhost:4000/${postItem.img}`} alt={postItem?.img} className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>

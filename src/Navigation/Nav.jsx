@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import { FaReddit } from "react-icons/fa6";
 import { IoMenu } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
@@ -49,7 +48,7 @@ const Nav = () => {
                     </div>
                 </div>
                 {
-                    login == false ?
+                    login === false ?
                         <div className="flex items-center gap-2 mr-5">
                             <div className="hidden lg:block xl:block md:block">
                                 <button className="text-white flex items-center gap-2 text-sm font-bold px-4 py-2.5 bg-gray-700 rounded-full">

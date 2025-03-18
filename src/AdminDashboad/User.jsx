@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useContext } from 'react';
+import React, { useState, useContext } from 'react';
 import { HiOutlineDotsHorizontal } from "react-icons/hi";
 import { Link } from 'react-router-dom';
 import { ToggleClass } from '../Context/Context';
@@ -7,7 +7,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const UsersTable = () => {
-  const { getUser, setGetUser } = useContext(ToggleClass)
+  const { getUser } = useContext(ToggleClass)
   const [showDropdown, setShowDropdown] = useState({});
 
   const handleDropdownToggle = (_id) => {

@@ -39,7 +39,7 @@ const Profile = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [userId]);
 
   useEffect(() => {
     try {
@@ -51,7 +51,7 @@ const Profile = () => {
     } catch (error) {
       console.log(error);
     }
-  }, []);
+  }, [userId]);
 
   const handleDelete = async (_id) => {
     try {
@@ -185,7 +185,7 @@ const Profile = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`http://localhost:4000/${postItem.img}`} alt="image" className='object-cover w-full rounded-lg' />
+                  <img src={`http://localhost:4000/${postItem.img}`} alt="" className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>

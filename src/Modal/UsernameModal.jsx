@@ -49,6 +49,8 @@ const ChangeUsernameModal = ({ closeModal, saveUsername }) => {
                         placeholder="Enter new username"
                     />
 
+                    {error && <p className="text-red-500 text-sm mb-4">{error}</p>}
+
                     {/* Buttons */}
                     <div className="flex justify-between">
                         <button onClick={closeModal}

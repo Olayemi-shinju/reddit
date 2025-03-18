@@ -51,7 +51,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -68,7 +68,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -85,7 +85,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -102,7 +102,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -119,7 +119,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -136,7 +136,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -153,7 +153,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -170,7 +170,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -187,7 +187,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -204,7 +204,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
                 <div className='mb-4 flex items-start justify-between border-b-[0.25px] border-b-gray-800 pb-3'>
@@ -221,7 +221,7 @@ const DetailRightNav = () => {
                         </div>
                     </div>
                     <div className=''>
-                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="image" className='object-cover rounded-lg w-[90px]' />
+                        <img src="https://b.thumbs.redditmedia.com/V1Nlgg3kUC8vuZlkFbMX1Ox6r_eVOu5409mPZe0jYEI.jpg" alt="" className='object-cover rounded-lg w-[90px]' />
                     </div>
                 </div>
             </div>

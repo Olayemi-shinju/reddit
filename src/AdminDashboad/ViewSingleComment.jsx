@@ -18,7 +18,7 @@ const ViewSingleComment = () => {
     try {
       const fetchPost = async () => {
         const response = await axios.get(`http://localhost:4000/api/comment/${id}`)
-        if (response.data.status == 200) {
+        if (response.data.status === 200) {
           setComment(response.data.data)
         } else {
           setComment([])
@@ -28,7 +28,7 @@ const ViewSingleComment = () => {
     } catch (error) {
       console.log(error)
     }
-  }, [])
+  }, [id])
   const handleDeleteComment = async (_id) => {
     try {
       const confirm = window.confirm('Are You Sure You Want To Delete This Comment?')

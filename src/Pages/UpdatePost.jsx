@@ -62,8 +62,6 @@ const UpdatePost = () => {
         setSelectedOption(option);
     };
 
-    const storedUserData = JSON.parse(localStorage.getItem('userDetail'))
-    const userId = storedUserData?.id
     const handlePostSubmission = async () => {
         const formData = new FormData();
         formData.append('title', title);

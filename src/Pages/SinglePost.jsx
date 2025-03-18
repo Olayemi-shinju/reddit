@@ -58,7 +58,7 @@ const SinglePost = () => {
             }
         };
         fetchPostComments();
-    }, []);
+    }, [id]);
 
 
     const navigate = useNavigate()
@@ -76,7 +76,7 @@ const SinglePost = () => {
             }
         }
         fetchPost()
-    }, [])
+    }, [id])
 
 
     return (

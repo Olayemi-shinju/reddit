@@ -8,7 +8,7 @@ const {getAdmin} = useContext(ToggleClass)
   useEffect(() => {
     const storedAdminData = localStorage.getItem('adminDetail');
     if (storedAdminData) {
-        navigate('/AdminDash')
+        
     } else {
       navigate('/AdminLogin');
     }

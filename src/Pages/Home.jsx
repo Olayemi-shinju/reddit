@@ -16,7 +16,7 @@ const Home = () => {
   const [getPost, setGetPost] = useState([]);
   const { light, open } = useContext(ToggleClass);
   const getUser = JSON.parse(localStorage.getItem('userDetail'));
-  const users = getUser?.fullname.slice(0, 1).toUpperCase();
+  // const users = getUser?.fullname.slice(0, 1).toUpperCase();
   const userID = getUser?.id;
   const storeLogin = localStorage.getItem('login');
   const [likeCounts, setLikeCounts] = useState({});
@@ -87,7 +87,7 @@ const Home = () => {
                 <div className="flex flex-col items-end cursor-pointer">
                   {post.user?.avatar == null ? (
                     <div className="w-[30px] relative bg-gray-400 flex items-center justify-center h-[30px] rounded-full text-lime-700">
-                      {users}
+                      {post?.user?.fullname.slice(0,1).toUpperCase()}
                     </div>
                   ) : (
                     <div className="">

@@ -136,9 +136,9 @@ const Signin = ({ close, goBackToLogin }) => {
                 </div>
 
                 <div className="flex items-center justify-center">
-                  <button onClick={handleSubmit} className="text-md font-semibold rounded-3xl mt-2 text-gray-300 bg-orange-700 py-3 w-full sm:w-[90%] md:w-[80%] lg:w-[400px]">
-                   {loader === true ? 'Please Wait....' : 'Sign Up'}
-                  </button>
+                <button onClick={handleSubmit} className={loader === true ? 'bg-gray-300 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
+                          {loader === true ? 'Please Wait....' : 'Sign Up'}
+                          </button>
                 </div>
               </form>
             </div>

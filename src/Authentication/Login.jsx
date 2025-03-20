@@ -12,6 +12,7 @@ const Login = ({ close }) => {
   const { ret } = useContext(ToggleClass)
   const [error, setError] = useState(null)
   const { light } = useContext(ToggleClass)
+  const [loader, setLoader] = useState(false)
   const [isSignin, setIsSignin] = useState(false);
   const [formData, setFormData] = useState({
     email: '',
@@ -31,6 +32,7 @@ const Login = ({ close }) => {
         setError('Please Fill All Input Field')
       } else {
         const resp = await axios.post('https://ola-reddit.onrender.com/api/user/login', formData)
+        setLoader(true)
         if (resp.data.status === 200) {
           toast.success('User Login Successful')
           ret()
@@ -165,7 +167,7 @@ const Login = ({ close }) => {
                         </div>
                         <div className="flex items-center justify-center">
                           <button onClick={handleSubmit} className="text-md font-semibold rounded-3xl mt-2 text-gray-300 bg-orange-700 py-3 w-full lg:w-[400px]">
-                            Log In
+                          {loader === true ? 'Please Wait....' : 'Log In'}
                           </button>
                         </div>
                       </form>

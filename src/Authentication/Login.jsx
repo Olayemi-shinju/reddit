@@ -42,6 +42,7 @@ const Login = ({ close }) => {
         } else {
           setError(null)
           toast.error('Invalid Email Or Password')
+          setLoader(false)
         }
       }
     } catch (error) {

@@ -37,6 +37,7 @@ const Signin = ({ close, goBackToLogin }) => {
         } else {
           toast.error(resp.data.msg);
           setError(null);
+          setLoader(false)
         }
       }
     } catch (error) {

@@ -31,30 +31,7 @@ const Login = ({ close }) => {
       if (!formData.email.trim() || !formData.password.trim()) {
         setError('Please Fill All Input Field')
       } else {
-        const resp = await axios.post('https://ola-reddit.onrender.com/api/user/login', formData)
         setLoader(true)
-        if (resp.data.status === 200) {
-          toast.success('User Login Successful')
-          ret()
-          localStorage.setItem('userDetail', JSON.stringify(resp.data.data))
-          close()
-
-        } else {
-          setError(null)
-          toast.error('Invalid Email Or Password')
-        }
-      }
-    } catch (error) {
-      console.log(error)
-    }
-  }
-
-  const handleSubmit2 = async (e) => {
-    e.preventDefault()
-    try {
-      if (!formData.email.trim() || !formData.password.trim()) {
-        setError('Please Fill All Input Field')
-      } else {
         const resp = await axios.post('https://ola-reddit.onrender.com/api/user/login', formData)
         if (resp.data.status === 200) {
           toast.success('User Login Successful')
@@ -71,6 +48,30 @@ const Login = ({ close }) => {
       console.log(error)
     }
   }
+
+  // const handleSubmit2 = async (e) => {
+  //   e.preventDefault()
+  //   try {
+  //     if (!formData.email.trim() || !formData.password.trim()) {
+  //       setError('Please Fill All Input Field')
+  //     } else {
+  //       const resp = await axios.post('https://ola-reddit.onrender.com/api/user/login', formData)
+  //       setLoader(true)
+  //       if (resp.data.status === 200) {
+  //         toast.success('User Login Successful')
+  //         ret()
+  //         localStorage.setItem('userDetail', JSON.stringify(resp.data.data))
+  //         close()
+
+  //       } else {
+  //         setError(null)
+  //         toast.error('Invalid Email Or Password')
+  //       }
+  //     }
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+  // }
 
 
   const goToSignin = () => {
@@ -167,7 +168,7 @@ const Login = ({ close }) => {
                         </div>
                         <div className="flex items-center justify-center">
                           <button onClick={handleSubmit} className={loader === true ? 'bg-gray-300 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
-                          {loader === true ? 'Please Wait....' : 'Log In'}
+                            {loader === true ? 'Please Wait....' : 'Log In'}
                           </button>
                         </div>
                       </form>
@@ -265,8 +266,8 @@ const Login = ({ close }) => {
                         </li>
                       </div>
                       <div className="flex items-center justify-center">
-                        <button onClick={handleSubmit2} className="text-md font-semibold rounded-3xl mt-2 text-gray-300 bg-orange-700 py-3 w-full lg:w-[400px]">
-                          Log In
+                        <button onClick={handleSubmit} className={loader === true ? 'bg-gray-300 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
+                          {loader === true ? 'Please Wait....' : 'Log In'}
                         </button>
                       </div>
                     </div>

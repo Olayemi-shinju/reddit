@@ -97,7 +97,7 @@ const SinglePost = () => {
                                             </div>
                                         ) : (
                                             <div className="">
-                                                <img src={`https://ola-reddit.onrender.com/${post.user?.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
+                                                <img src={post.user?.avatar} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
                                             </div>
                                         )}
 
@@ -117,7 +117,7 @@ const SinglePost = () => {
                         </div>
                         {
                             post.img && <div className='w-full'>
-                                <img src={`http://localhost:4000/${post.img}`} alt="" className='object-cover w-full rounded-lg' />
+                                <img src={post.img} alt="" className='object-cover w-full rounded-lg' />
                             </div>
                         }
 
@@ -185,7 +185,7 @@ const SinglePost = () => {
                                                 </div>
                                             ) : (
                                                 <div className="">
-                                                    <img src={`http://localhost:4000/${e.user?.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
+                                                    <img src={e.user?.avatar} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
                                                 </div>
                                             )}
 

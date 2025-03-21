@@ -100,7 +100,7 @@ const Profile = () => {
               </div>
             ) : (
               <div className="">
-                <img src={`https://ola-reddit.onrender.com/${user.avatar}`} alt="" className="h-[60px] w-[60px] rounded-full" />
+                <img src={user.avatar} alt="" className="h-[60px] w-[60px] rounded-full" />
               </div>
             )}
             <Link to='/setting' className='absolute ml-10 mt-[30px]'>
@@ -141,7 +141,7 @@ const Profile = () => {
                         {users}
                       </div>
                     ) : (
-                      <img src={`https://ola-reddit.onrender.com/${postItem.user.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                      <img src={postItem.user.avatar} alt="" className="h-[30px] w-[30px] rounded-full" />
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>
                   </div>
@@ -185,7 +185,7 @@ const Profile = () => {
               )}
               {postItem.img && (
                 <div className=''>
-                  <img src={`https://ola-reddit.onrender.com/${postItem.img}`} alt="" className='object-cover w-full rounded-lg' />
+                  <img src={postItem.img} alt="" className='object-cover w-full rounded-lg' />
                 </div>
               )}
             </div>
@@ -209,7 +209,7 @@ const Profile = () => {
                       </div>
                     ) : (
                       <div className="">
-                        <img src={`https://ola-reddit.onrender.com/${e?.user?.avatar}`} alt="" className="h-[30px] w-[30px] rounded-full" />
+                        <img src={e?.user?.avatar} alt="" className="h-[30px] w-[30px] rounded-full" />
                       </div>
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>

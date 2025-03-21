@@ -91,7 +91,7 @@ const Home = () => {
                     </div>
                   ) : (
                     <div className="">
-                      <img src={`https://ola-reddit.onrender.com/${post.user?.avatar}`} alt={post?.title} className="h-[30px] w-[30px] rounded-full" />
+                      <img src={post.user?.avatar} alt={post?.title} className="h-[30px] w-[30px] rounded-full" />
                     </div>
                   )}
 
@@ -116,7 +116,7 @@ const Home = () => {
               <Link to={post.url} className={`${light ? 'text-white' : 'text-black'} text-lg list-none font-semibold`}>{post.url}</Link>
             </div>}
             {post.img && <div className='w-full'>
-              <img src={`https://ola-reddit.onrender.com/${post.img}`} alt="" className='object-cover w-full rounded-lg' />
+              <img src={post?.img} alt="" className='object-cover w-full rounded-lg' />
             </div>}
 
             <div className='mt-3 flex items-center gap-4 mb-5 w-full'>

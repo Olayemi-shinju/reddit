@@ -16,7 +16,7 @@ const Post = () => {
     const [link, setLink] = useState('');
     const [dragging, setDragging] = useState(false);
     const [imagePreview, setImagePreview] = useState(null); // State for image preview
-
+    const [loader, setLoader] = useState(false)
     // Handle drag over event to highlight the drop area
     const handleDragOver = (e) => {
         e.preventDefault();
@@ -72,12 +72,14 @@ const Post = () => {
 
         try {
             if (!title.trim()) return toast.error('Please Enter a Title')
+        setLoader(true)
             const resp = await axios.post(`https://ola-reddit.onrender.com/api/post/${userId}`, formData)
             if (resp.data.status === 200) {
                 toast.success(resp.data.msg)
                 navigate('/')
             } else {
                 toast.error(resp.data.msg)
+                setLoader(false)
             }
         } catch (error) {
             console.error(error);
@@ -198,7 +200,7 @@ const Post = () => {
                     <div className='h-[20px]'></div>
                     <div className='flex gap-3 text-white justify-end'>
                         <button className='font-semibold text-xs bg-blue-600 px-3 py-2 rounded-3xl'>Save Draft</button>
-                        <button className='font-semibold text-xs bg-blue-600 px-3 py-2 rounded-3xl' onClick={handlePostSubmission}>Post</button>
+                        <button disabled={loader} className={loader === true ? 'font-semibold bg-gray-100 text-xs px-3 py-2 rounded-3xl' : 'font-semibold bg-blue-600 text-xs px-3 py-2 rounded-3xl'} onClick={handlePostSubmission}>Post</button>
                     </div>
                 </div>
             </div>

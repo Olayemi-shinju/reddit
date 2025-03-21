@@ -6,7 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
 
 const Signin = ({ close, goBackToLogin }) => {
-  const [error, setError] = useState(null);
+  const [error, setError] = useState('');
   const [loader, setLoader] = useState(false)
   const { light } = useContext(ToggleClass);
   const [formData, setFormData] = useState({
@@ -27,8 +27,9 @@ const Signin = ({ close, goBackToLogin }) => {
       if (!formData.email.trim() || !formData.password.trim() || !formData.fullname.trim() || !formData.gender.trim()) {
         setError('Please Fill All Input Field');
       } else {
-        const resp = await axios.post('https://ola-reddit.onrender.com/api/user', formData);
+        setError('');
         setLoader(true)
+        const resp = await axios.post('https://ola-reddit.onrender.com/api/user', formData);
         if (resp.data.status === 200) {
           toast.success(resp.data.msg);
           setTimeout(() => {
@@ -36,7 +37,6 @@ const Signin = ({ close, goBackToLogin }) => {
           }, 6000);
         } else {
           toast.error(resp.data.msg);
-          setError(null);
           setLoader(false)
         }
       }
@@ -137,7 +137,7 @@ const Signin = ({ close, goBackToLogin }) => {
                 </div>
 
                 <div className="flex items-center justify-center">
-                <button onClick={handleSubmit} className={loader === true ? 'bg-gray-300 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
+                <button disabled={loader} onClick={handleSubmit} className={loader === true ? 'bg-gray-100 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
                           {loader === true ? 'Please Wait....' : 'Sign Up'}
                           </button>
                 </div>

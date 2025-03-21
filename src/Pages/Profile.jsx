@@ -94,13 +94,13 @@ const Profile = () => {
       <div className='lg:w-[63%] border-b-[0.25px] border-b-gray-200 pb-10'>
         <div className='flex items-center gap-7'>
           <div className='flex items-end'>
-            {user == null ? (
-              <div className="w-[60px] relative bg-gray-400 flex items-center justify-center h-[60px] rounded-full text-lime-700">
+            {post?.user?.avatar == null ? (
+              <div className="w-[60px] relative text-2xl bg-gray-400 flex items-center justify-center h-[60px] rounded-full text-lime-700">
                 {users}
               </div>
             ) : (
               <div className="">
-                <img src={user.avatar} alt="" className="h-[60px] w-[60px] rounded-full" />
+                <img src={user?.avatar} alt="" className="h-[60px] w-[60px] rounded-full" />
               </div>
             )}
             <Link to='/setting' className='absolute ml-10 mt-[30px]'>
@@ -132,16 +132,16 @@ const Profile = () => {
       {activeTab === 'post' ? (
         post?.length > 0 ? (
           post.map((postItem) => (
-            <div key={postItem._id} className='lg:w-[60%] mt-3'>
+            <div key={postItem?._id} className='lg:w-[60%] mt-3'>
               <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-3'>
                   <div className="flex flex-col items-end cursor-pointer">
                     {!postItem.user.avatar ? (
                       <div className="w-[30px] relative bg-gray-400 flex items-center justify-center h-[30px] rounded-full text-lime-700">
-                        {users}
+                        {postItem?.user?.fullname.slice(0,1).toUpperCase()}
                       </div>
                     ) : (
-                      <img src={postItem.user.avatar} alt="" className="h-[30px] w-[30px] rounded-full" />
+                      <img src={postItem?.user?.avatar} alt="" className="h-[30px] w-[30px] rounded-full" />
                     )}
                     <div className="h-[7px] absolute w-[7px] rounded-full bg-green-700 mt-[25px]"></div>
                   </div>

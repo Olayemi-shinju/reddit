@@ -181,7 +181,7 @@ const SinglePost = () => {
                                         <div className="flex flex-col items-end cursor-pointer" key={e?._id}>
                                             {e?.user?.avatar == null ? (
                                                 <div className="w-[30px] relative bg-gray-400 flex items-center justify-center h-[30px] rounded-full text-lime-700">
-                                                    {users}
+                                                    {e.user?.fullname.slice(0,1).toUpperCase()}
                                                 </div>
                                             ) : (
                                                 <div className="">

@@ -61,7 +61,6 @@ const AvatarUploadModal = () => {
       formData.append('avatar', imageFile);
 
       const response = await axios.put(`https://ola-reddit.onrender.com/api/${id}`, formData);
-      console.log(response)
       if(response.data.status === 200){
         toast.success(response.data.msg)
         closeModal()

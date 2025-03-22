@@ -94,7 +94,7 @@ const Profile = () => {
       <div className='lg:w-[63%] border-b-[0.25px] border-b-gray-200 pb-10'>
         <div className='flex items-center gap-7'>
           <div className='flex items-end'>
-            {post?.user?.avatar == null ? (
+            {user?.avatar === null ? (
               <div className="w-[60px] relative text-2xl bg-gray-400 flex items-center justify-center h-[60px] rounded-full text-lime-700">
                 {users}
               </div>

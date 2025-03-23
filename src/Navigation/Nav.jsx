@@ -25,7 +25,7 @@ const Nav = () => {
 
     return (
         <div>
-            <div className={`${light ? "  bg-gray-950" : 'bg-white'} fixed gap-7 md:justify-between justify-between top-0 left-0 right-0 z-10 flex items-center px-4 py-2 border-b-[0.25px] border-b-gray-700`}>
+            <div className={`${light ? "  bg-gray-950" : 'bg-white'} fixed gap-7 md:justify-between justify-between top-0 left-0 right-0 z-30 flex items-center px-4 py-2 border-b-[0.25px] border-b-gray-700`}>
                 <div className="flex items-center md:justify-between gap-2 lg:jutify-between">
                     <div className="flex items-center lg:gap-4 gap-2">
                         <div className="lg:hidden">
@@ -99,7 +99,7 @@ const Nav = () => {
 
             {/* Modal for login */}
             {isOpen && (
-                <div className="fixed inset-0 z-20 flex items-center justify-center">
+                <div className="fixed inset-0 z-30 flex items-center justify-center">
                     {/* Background Overlay */}
                     <div
                         className="fixed inset-0 bg-gray-900 bg-opacity-50"

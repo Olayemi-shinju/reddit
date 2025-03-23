@@ -4,7 +4,6 @@ import { ToggleClass } from '../Context/Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
-import { BsApple } from 'react-icons/bs';
 import { FcGoogle } from 'react-icons/fc';
 
 const Signin = ({ close, goBackToLogin }) => {
@@ -51,7 +50,7 @@ const Signin = ({ close, goBackToLogin }) => {
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 p-4">
       <ToastContainer />
-      <div className={`${light ? "bg-gray-900 text-gray-300" : 'bg-white text-black'} w-[100%] p-4 md:w-[50%] lg:w-[42%] rounded-xl shadow-lg`}>
+      <div className={`${light ? "bg-gray-900 text-gray-300" : 'bg-white text-black'} w-[100%] px-8 py-4 md:w-[50%] lg:w-[42%] rounded-xl shadow-lg`}>
         <div className="flex justify-end">
           <button onClick={close} className={`${light ? "text-white bg-gray-800" : 'text-gray-700 bg-gray-300'} h-8 w-8 rounded-full flex items-center justify-center`}>
             <AiOutlineClose />
@@ -64,9 +63,6 @@ const Signin = ({ close, goBackToLogin }) => {
         <div className="flex flex-col gap-3 mt-4">
             <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
               <FcGoogle className="text-xl" /> Continue With Google
-            </button>
-            <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
-              <BsApple className="text-xl" /> Continue With Apple
             </button>
           </div>
         <form className='mt-6' autoComplete='off' onSubmit={handleSubmit}>

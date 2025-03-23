@@ -4,6 +4,8 @@ import { ToggleClass } from '../Context/Context';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import axios from 'axios';
+import { BsApple } from 'react-icons/bs';
+import { FcGoogle } from 'react-icons/fc';
 
 const Signin = ({ close, goBackToLogin }) => {
   const [error, setError] = useState('');
@@ -59,21 +61,26 @@ const Signin = ({ close, goBackToLogin }) => {
         <p className="text-sm text-center text-gray-400">
           By continuing, you agree to our <span className="text-blue-500 cursor-pointer">User Agreement</span> and <span className="text-blue-500 cursor-pointer">Privacy Policy</span>.
         </p>
+        <div className="flex flex-col gap-3 mt-4">
+            <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
+              <FcGoogle className="text-xl" /> Continue With Google
+            </button>
+            <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
+              <BsApple className="text-xl" /> Continue With Apple
+            </button>
+          </div>
         <form className='mt-6' autoComplete='off' onSubmit={handleSubmit}>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Full Name <span className="text-red-700">*</span></label>
-            <input type="text" placeholder='Enter fullanem' name="fullname" value={formData.fullname} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
+            <input type="text" placeholder='Enter fullname' name="fullname" value={formData.fullname} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Email <span className="text-red-700">*</span></label>
-            <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
+                  <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Password <span className="text-red-700">*</span></label>
             <input type="password" placeholder='Password' name="password" value={formData.password} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
-            <label className="block text-sm font-medium">Gender <span className="text-red-700">*</span></label>
+      
             <select name="gender" value={formData.gender} onChange={handleChange} className="w-full p-3 border rounded-full outline-none">
               <option value="">Select Gender</option>
               <option value="male">Male</option>
@@ -81,12 +88,11 @@ const Signin = ({ close, goBackToLogin }) => {
             </select>
           </div>
           {error && <p className="text-red-600 text-sm text-center mb-4">{error}</p>}
+          
             Already a Redditor? <span onClick={goBackToLogin} className="text-blue-600 cursor-pointer">Log in</span>
           <button type="submit" disabled={loader} className={`w-full py-3 rounded-full mt-6 text-white ${loader ? 'bg-gray-400' : 'bg-orange-700 hover:bg-orange-600'}`}>
             {loader ? 'Please Wait...' : 'Sign Up'}
           </button>
-          <p className="text-gray-400 text-sm text-center mt-4">
-          </p>
         </form>
       </div>
     </div>

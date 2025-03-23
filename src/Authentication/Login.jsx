@@ -40,8 +40,10 @@ const Login = ({ close }) => {
         setLoader(false);
       }
     } catch (error) {
-      console.error(error);
-      setLoader(false);
+      if (error) {
+        toast.error(`An unexpected error occurred: ${error.message}`);
+        setLoader(false)
+      }
     }
   };
 

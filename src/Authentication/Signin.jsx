@@ -42,8 +42,11 @@ const Signin = ({ close, goBackToLogin }) => {
         }
       }
     } catch (error) {
-      console.log(error);
-      toast.error(`An unexpected error occurred: ${error.message}`);
+      console.error(error);
+      if (error) {
+        toast.error(`An unexpected error occurred: ${error.message}`);
+        setLoader(false)
+      }
     }
   };
 
@@ -61,22 +64,22 @@ const Signin = ({ close, goBackToLogin }) => {
           By continuing, you agree to our <span className="text-blue-500 cursor-pointer">User Agreement</span> and <span className="text-blue-500 cursor-pointer">Privacy Policy</span>.
         </p>
         <div className="flex flex-col gap-3 mt-4">
-            <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
-              <FcGoogle className="text-xl" /> Continue With Google
-            </button>
-          </div>
+          <button className="flex items-center justify-center gap-4 w-full border border-gray-300 rounded-full p-3 font-semibold bg-white text-gray-700">
+            <FcGoogle className="text-xl" /> Continue With Google
+          </button>
+        </div>
         <form className='mt-6' autoComplete='off' onSubmit={handleSubmit}>
           <div className="mb-4">
             <input type="text" placeholder='Enter fullname' name="fullname" value={formData.fullname} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
-                  <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
+            <input type="email" name="email" placeholder='Email' value={formData.email} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
             <input type="password" placeholder='Password' name="password" value={formData.password} onChange={handleChange} className="w-full p-3 border rounded-full outline-none" />
           </div>
           <div className="mb-4">
-      
+
             <select name="gender" value={formData.gender} onChange={handleChange} className="w-full p-3 border rounded-full outline-none">
               <option value="">Select Gender</option>
               <option value="male">Male</option>
@@ -84,8 +87,8 @@ const Signin = ({ close, goBackToLogin }) => {
             </select>
           </div>
           {error && <p className="text-red-600 text-sm text-center mb-4">{error}</p>}
-          
-            Already a Redditor? <span onClick={goBackToLogin} className="text-blue-600 cursor-pointer">Log in</span>
+
+          Already a Redditor? <span onClick={goBackToLogin} className="text-blue-600 cursor-pointer">Log in</span>
           <button type="submit" disabled={loader} className={`w-full py-3 rounded-full mt-6 text-white ${loader ? 'bg-gray-400' : 'bg-orange-700 hover:bg-orange-600'}`}>
             {loader ? 'Please Wait...' : 'Sign Up'}
           </button>

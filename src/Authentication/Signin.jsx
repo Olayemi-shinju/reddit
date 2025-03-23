@@ -72,7 +72,7 @@ const Signin = ({ close, goBackToLogin }) => {
                     id="fullname"
                     type="text"
                     name='fullname'
-                    
+
                     value={formData.fullname}
                     onChange={handleChange}
                     className="peer w-full sm:w-[90%] md:w-[80%] lg:w-[400px] p-4 border text-black rounded-3xl outline-none focus:outline-none focus:ring-2"
@@ -137,16 +137,17 @@ const Signin = ({ close, goBackToLogin }) => {
                 </div>
 
                 <div className="flex items-center justify-center">
-                <button disabled={loader} onClick={handleSubmit} className={loader === true ? 'bg-gray-100 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
-                          {loader === true ? 'Please Wait....' : 'Sign Up'}
-                          </button>
+                  <button disabled={loader} onClick={handleSubmit} className={loader === true ? 'bg-gray-100 text-black "text-md font-semibold rounded-3xl mt-2 py-3 w-full lg:w-[400px]"' : 'bg-orange-700 "text-md font-semibold rounded-3xl mt-2 text-gray-300 py-3 w-full lg:w-[400px]"'}>
+                    {loader === true ? 'Please Wait....' : 'Sign Up'}
+                  </button>
                 </div>
               </form>
             </div>
-          <ToastContainer />
           </div>
+            <ToastContainer />
         </div>
       </div>
+      
       <div className="grid place-items-center h-screen w-full lg:hidden">
         <div className="h-[100vh] fixed pb-4 z-50 top-0 items-center flex justify-center">
           <div className={`${light ? "bg-gray-900" : 'bg-white'} fixed pb-4 z-40 sm:w-[90%] w-full md:w-[80%] lg:w-[43%] rounded-xl`}>
@@ -240,8 +241,8 @@ const Signin = ({ close, goBackToLogin }) => {
               </form>
             </div>
           </div>
-          <ToastContainer />
         </div>
+          <ToastContainer />
       </div>
     </div>
   );

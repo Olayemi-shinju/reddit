@@ -143,8 +143,8 @@ const Signin = ({ close, goBackToLogin }) => {
                 </div>
               </form>
             </div>
-          </div>
           <ToastContainer />
+          </div>
         </div>
       </div>
       <div className="grid place-items-center h-screen w-full lg:hidden">

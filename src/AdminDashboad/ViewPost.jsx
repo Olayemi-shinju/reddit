@@ -51,30 +51,30 @@ const ViewPost = () => {
       </div>
       <div className="lg:ml-[300px] w-[40%] lg:col-span-8 pt-20">
         {
-          getPost.map((post, index) => (
+          getPost?.map((post, index) => (
             <div className='p-2' key={post._id}>
               <div className='flex justify-between items-center'>
                 <div className='flex items-center gap-3'>
                   <div className="flex flex-col items-end cursor-pointer">
-                    {post.user.avatar == null ? (
+                    {post?.user?.avatar == null ? (
                       <div className="w-[30px] relative bg-gray-400 flex items-center justify-center h-[30px] rounded-full text-lime-700">
                         {users}
                       </div>
                     ) : (
                       <div className="">
-                        <img src={`https://ola-reddit.onrender.com/${post.user.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
+                        <img src={`https://ola-reddit.onrender.com/${post?.user?.avatar}`} alt="" srcset="" className="h-[30px] w-[30px] rounded-full" />
                       </div>
                     )}
 
                     <div className="h-[7px] absolute  w-[7px] rounded-full bg-green-700 mt-[25px]"></div>
                   </div>
                   <h2 className={`${light ? 'text-white' : 'text-black'} text-sm font-semibold`}>
-                    {post.user?.fullname} • {new Date(post.user?.date_created).toDateString()}
+                    {post?.user?.fullname} • {new Date(post?.user?.date_created).toDateString()}
                   </h2>
                 </div>
                 <div className='flex items-center gap-3'>
                   <button className='px-3 py-0.5 text-sm bg-blue-600 text-white font-bold rounded-full'>Join</button>
-                  <RiDeleteBin6Line onClick={() => handleDelete(post._id)} className={`${light ? 'text-white' : 'text-black'} text-md cursor-pointer`} />
+                  <RiDeleteBin6Line onClick={() => handleDelete(post?._id)} className={`${light ? 'text-white' : 'text-black'} text-md cursor-pointer`} />
                 </div>
               </div>
               <div className='p-2'>
@@ -91,7 +91,7 @@ const ViewPost = () => {
                 </div>
               }
               <div className=''>
-                <img src={`${post.img ? `https://ola-reddit.onrender.com/${post.img}` : null}`} alt={post?.img} className='object-cover w-full rounded-lg' />
+                <img src={`${post?.img ? `https://ola-reddit.onrender.com/${post.img}` : null}`} alt={post?.img} className='object-cover w-full rounded-lg' />
               </div>
             </div>
           ))

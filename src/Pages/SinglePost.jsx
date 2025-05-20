@@ -16,8 +16,6 @@ import { toast, ToastContainer } from 'react-toastify';
 
 const SinglePost = () => {
     const { id } = useParams()
-    const getUser = JSON.parse(localStorage.getItem('userDetail'));
-    const users = getUser?.fullname.slice(0, 1).toUpperCase();
     const [post, setPost] = useState({})
     const [comment, setComment] = useState([])
     const { light } = useContext(ToggleClass)
@@ -70,7 +68,7 @@ const SinglePost = () => {
             try {
                 const res = await axios.get(`https://ola-reddit.onrender.com/api/post/${id}`)
                 setPost(res.data.data)
-               
+               console.log(res)
             } catch (error) {
                 console.log(error)
             }
@@ -93,7 +91,7 @@ const SinglePost = () => {
                                     <div className="flex flex-col items-end cursor-pointer">
                                         {post.user?.avatar == null ? (
                                             <div className="w-[30px] relative bg-gray-400 flex items-center justify-center h-[30px] rounded-full text-lime-700">
-                                                {users}
+                                                {post?.user?.fullname.slice(0,1)}
                                             </div>
                                         ) : (
                                             <div className="">

@@ -20,7 +20,7 @@ const Nav = () => {
     const getUser = JSON.parse(localStorage.getItem('userDetail'));
     const users = getUser?.fullname.slice(0, 1).toUpperCase();
 
-
+    
 
 
     return (
